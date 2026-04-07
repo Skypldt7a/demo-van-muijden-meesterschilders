@@ -485,12 +485,19 @@ footer{background:var(--dark2);padding:30px 72px 18px;}
   const overlay = document.getElementById('lbOverlay');
   const img = document.getElementById('lbImg');
   const counter = document.getElementById('lbCounter');
+  function preload(i){
+    var idx = ((i % total) + total) % total;
+    var p = new Image();
+    p.src = imgs[idx];
+  }
   function open(i){
     cur = ((i % total) + total) % total;
     img.src = imgs[cur];
     counter.textContent = (cur + 1) + ' / ' + total;
     overlay.classList.add('lb-visible');
     document.body.style.overflow = 'hidden';
+    preload(cur + 1);
+    preload(cur + 2);
   }
   function close(){
     overlay.classList.remove('lb-visible');
