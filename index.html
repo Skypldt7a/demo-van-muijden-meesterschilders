@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="van Muijden Meesterschilders, Almelo & Omgeving">
 <meta name="twitter:description" content="Professioneel schilderwerk met 30+ jaar ervaring. Vraag gratis een offerte aan.">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"van Muijden Meesterschilders","description":"Professioneel schilder- en onderhoudsbedrijf in Almelo en omgeving.","url":"","telephone":"+31546538983","address":{"@type":"PostalAddress","addressLocality":"Almelo","addressCountry":"NL"},"areaServed":["Almelo", "Hier zijn 3 nabije plaatsen bij Almelo:", "Vriezenveen", "Wierden"],"openingHours":"ma–zo  08:00 to 17:00","priceRange":"$$","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.2","reviewCount":"36","bestRating":"5"},"sameAs":[]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"van Muijden Meesterschilders","description":"Professioneel schilder- en onderhoudsbedrijf in Almelo en omgeving.","url":"","telephone":"+31546538983","address":{"@type":"PostalAddress","addressLocality":"Almelo","addressCountry":"NL"},"areaServed":["Almelo", "Nijverdal", "Vriezenveen", "Wierden"],"openingHours":"ma–zo  08:00 to 17:00","priceRange":"$$","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.2","reviewCount":"36","bestRating":"5"},"sameAs":[]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,WONK@0,9..144,300,0;0,9..144,500,0;0,9..144,700,0;1,9..144,300,0;1,9..144,500,0&family=Playfair+Display:wght@500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -485,19 +485,12 @@ footer{background:var(--dark2);padding:30px 72px 18px;}
   const overlay = document.getElementById('lbOverlay');
   const img = document.getElementById('lbImg');
   const counter = document.getElementById('lbCounter');
-  function preload(i){
-    var idx = ((i % total) + total) % total;
-    var p = new Image();
-    p.src = imgs[idx];
-  }
   function open(i){
     cur = ((i % total) + total) % total;
     img.src = imgs[cur];
     counter.textContent = (cur + 1) + ' / ' + total;
     overlay.classList.add('lb-visible');
     document.body.style.overflow = 'hidden';
-    preload(cur + 1);
-    preload(cur + 2);
   }
   function close(){
     overlay.classList.remove('lb-visible');
@@ -594,7 +587,7 @@ footer{background:var(--dark2);padding:30px 72px 18px;}
     <h2 class="sec-title">Snel antwoord.</h2>
     <div class="faq-list" role="list">
       <div class="faq-item" role="listitem"><button class="faq-q" onclick="tF(this)" aria-expanded="false">Hoe snel kan ik een offerte verwachten?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" role="region"><div class="faq-a-inner">Wij sturen u binnen 24 uur na het eerste contact een vrijblijvende offerte. Bij grotere projecten plannen we een kort bezoek in voor een nauwkeurige inschatting.</div></div></div>
-      <div class="faq-item" role="listitem"><button class="faq-q" onclick="tF(this)" aria-expanded="false">In welke regio&#39;s zijn jullie actief?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" role="region"><div class="faq-a-inner">Wij werken in Almelo en de directe omgeving, waaronder Almelo, Hier zijn 3 nabije plaatsen bij Almelo:, Vriezenveen, Wierden.</div></div></div>
+      <div class="faq-item" role="listitem"><button class="faq-q" onclick="tF(this)" aria-expanded="false">In welke regio&#39;s zijn jullie actief?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" role="region"><div class="faq-a-inner">Wij werken in Almelo en de directe omgeving, waaronder Almelo, Nijverdal, Vriezenveen, Wierden.</div></div></div>
       <div class="faq-item" role="listitem"><button class="faq-q" onclick="tF(this)" aria-expanded="false">Geven jullie garantie op het werk?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" role="region"><div class="faq-a-inner">Ja. Op al onze werkzaamheden geven wij twee jaar werkgarantie. Ontstaat er een probleem binnen die periode, lossen wij het kosteloos op.</div></div></div>
       <div class="faq-item" role="listitem"><button class="faq-q" onclick="tF(this)" aria-expanded="false">Moeten wij zelf materiaal regelen?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" role="region"><div class="faq-a-inner">Nee, wij regelen alles. Van verf tot schildersfolie, transparant opgenomen in de offerte.</div></div></div>
       <div class="faq-item" role="listitem"><button class="faq-q" onclick="tF(this)" aria-expanded="false">Werken jullie ook voor bedrijven?<span class="faq-icon" aria-hidden="true">+</span></button><div class="faq-a" role="region"><div class="faq-a-inner">Ja, wij werken voor zowel particulieren als bedrijfspanden, kantoren en VvE&#39;s. Neem contact op voor een maatwerkofferte.</div></div></div>
@@ -627,7 +620,7 @@ footer{background:var(--dark2);padding:30px 72px 18px;}
 <footer role="contentinfo">
   <div class="footer-grid">
     <div><div class="f-logo">van Muijden Meesterschilders</div><p class="f-tagline">Vakmanschap dat blijft. Al meer dan 30+ jaar de betrouwbare keuze in Almelo en omgeving.</p></div>
-    <div><div class="f-col-title">Werkgebied</div><div class="f-col-val">Almelo<br>Hier zijn 3 nabije plaatsen bij Almelo:<br>Vriezenveen<br>Wierden</div></div>
+    <div><div class="f-col-title">Werkgebied</div><div class="f-col-val">Almelo<br>Nijverdal<br>Vriezenveen<br>Wierden</div></div>
     <div><div class="f-col-title">Diensten</div><div class="f-col-val">Binnenschilderwerk<br>Buitenschilderwerk<br>Houtreparatie<br>Kleuradvies</div></div>
     <div><div class="f-col-title">Bedrijfsinfo</div><div class="f-col-val">KVK: 12345678 (demo)<br>BTW: NL123456789B01 (demo)<br>ma–zo · 08:00 to 17:00<br>info@van-muijden-meesterschilders.nl</div></div>
   </div>
